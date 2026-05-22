@@ -60,7 +60,7 @@ A modern blogging platform built using **Django**, where users can create, updat
 
 ### Create Post
 
-![Create Post](images/create.png)
+![Create Post](images/createpost.png)
 
 ### Update Post
 ![Update_Post](images/update.png)
