@@ -1,0 +1,73 @@
+{% extends 'testapp/base.html' %}
+
+{% block content %}
+
+
+<div class="hero-section">
+
+    <h1>
+        Share Your Ideas With The World 🚀
+    </h1>
+
+    <p>
+        Create blogs, engage with readers and build your personal brand.
+        Publish articles, share knowledge and connect with readers.
+    </p>
+
+    {% if user.is_authenticated %}
+    <a href="{% url 'create' %}"
+       class="btn btn-primary btn-lg">
+        Start Writing
+    </a>
+    {% endif %}
+
+</div>
+
+<!-- Blog List Heading -->
+
+<h2 class="page-title">
+    Latest Blog Posts
+</h2>
+
+{% for post in posts %}
+
+<div class="card blog-card mb-4">
+
+    <div class="card-body">
+
+        <span class="badge bg-primary mb-3">
+            Blog Post
+        </span>
+
+        <h2 class="blog-title">
+            {{ post.title }}
+        </h2>
+
+        <p class="blog-meta">
+            By {{ post.author }}
+            |
+            {{ post.created_at|date:"d M Y" }}
+        </p>
+
+        <p>
+            {{ post.content|truncatewords:35 }}
+        </p>
+
+        <a href="{% url 'detail' post.id %}"
+           class="btn btn-primary">
+            Read More →
+        </a>
+
+    </div>
+
+</div>
+
+{% empty %}
+
+<div class="alert alert-info text-center">
+    No Blog Posts Available
+</div>
+
+{% endfor %}
+
+{% endblock %}

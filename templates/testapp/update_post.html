@@ -1,0 +1,37 @@
+{% extends 'testapp/base.html' %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+<div class="col-lg-8">
+
+<div class="card form-card">
+
+<div class="card-body">
+
+<h2 class="mb-4">
+Update Blog
+</h2>
+
+<form method="POST">
+
+{% csrf_token %}
+
+{{ form.as_p }}
+
+<button class="btn btn-warning">
+Update Blog
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}
