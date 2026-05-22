@@ -92,7 +92,8 @@ This project helped in understanding:
 
 [LinkedIn Profile](https://www.linkedin.com/in/sachin-kumar-362b53343/)
 
-[GitHub Profile]: https://github.com/SACHIN197-creator
+### Github
+[GitHub Profile](https://github.com/SACHIN197-creator)
 
 ---
 
